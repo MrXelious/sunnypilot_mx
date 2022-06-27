@@ -120,14 +120,14 @@ class CarInterface(CarInterfaceBase):
       ret.steerRatio = 16.5
       ret.lateralTuning.init('indi')
       ret.lateralTuning.indi.innerLoopGainBP = [0.]
-      ret.lateralTuning.indi.innerLoopGainV = [3.5]
+      ret.lateralTuning.indi.innerLoopGainV = [3.1]
       ret.lateralTuning.indi.outerLoopGainBP = [0.]
-      ret.lateralTuning.indi.outerLoopGainV = [2.0]
+      ret.lateralTuning.indi.outerLoopGainV = [2.5]
       ret.lateralTuning.indi.timeConstantBP = [0.]
       ret.lateralTuning.indi.timeConstantV = [1.4]
       ret.lateralTuning.indi.actuatorEffectivenessBP = [0.]
-      ret.lateralTuning.indi.actuatorEffectivenessV = [2.3]
-      ret.minSteerSpeed = 60 * CV.KPH_TO_MS
+      ret.lateralTuning.indi.actuatorEffectivenessV = [2.]
+      ret.minSteerSpeed = 0 * CV.KPH_TO_MS
     elif candidate in (CAR.KONA, CAR.KONA_EV, CAR.KONA_HEV):
       ret.lateralTuning.pid.kf = 0.00005
       ret.mass = {CAR.KONA_EV: 1685., CAR.KONA_HEV: 1425.}.get(candidate, 1275.) + STD_CARGO_KG
